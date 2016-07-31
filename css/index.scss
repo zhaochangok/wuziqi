@@ -1,0 +1,316 @@
+%juzhong{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+};
+body{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	overflow: hidden;
+
+}  
+.zhezhaozuo{
+	width:50%;
+	height:100%;
+	background:rgba(0,0,0,0.9);
+	position:absolute;
+	left:0;
+	top:0;
+	z-index: 5;
+	transition: all 2s ease;
+}
+.zhezhaozuo.zuo{
+	transform:translateX(-200%);
+}
+.jieshao{
+	width:500px;
+	height:200px;
+	background:rgba(0,0,0,0);
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+    transition:all 2s ease;
+	z-index: 200;
+	border-radius: 10px;
+	opacity:1;
+}
+.jieshao.shang{
+	transform:translateY(-400%);
+	opacity:0;
+}
+.jieshao .jieshaoa{
+	text-align: center;
+	font-size: 30px;
+	font-family:  "华康少女文字w5(p)";
+	font-weight: bold;
+	color:#fff;
+}
+.select{
+	width:150px;
+	height:40px;
+	background:orange;
+	position:absolute;
+    left:610px;
+    top:500px;
+	z-index: 400;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 10px;
+	font-size: 20px;
+	cursor:pointer;
+	transition:all 2s ease;
+	opacity:1;
+}
+.select.xia{
+	transform:translateY(400%);
+	opacity:0;
+}
+.select li{
+	color:#fff;
+}
+.jieshao .guize{
+	line-height: 2em;
+	font-size: 14px;
+    font-family: "微软雅黑";
+    color:#fff;
+}
+.zhezhaoyou{
+	width:50%;
+	height:100%;
+	background:rgba(0,0,0,0.9);
+	position:absolute;
+	left:50%;
+	top:0;
+	z-index: 5;
+	transition:all 2s ease;
+}
+.zhezhaoyou.you{
+	transform:translateX(200%);
+}
+$width:600px;
+.changjing .qipan{
+	@extend %juzhong;
+	width: $width;
+	height: $width;
+    background:url(./images/backg.png)no-repeat;
+    background-size: $width $width;
+    transition:all .8s ease;
+    transform:translateX(-200%);
+    opacity:0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #fff;
+}
+.changjing .qipan.xia{
+	transform:translateX(0);
+	opacity:1;
+}
+.changjing{
+	width: $width;
+	height: $width;
+	@extend %juzhong;
+	.qizi{
+	position: relative;
+	width: $width/15;
+	height: $width/15;
+	float: left;
+	border-radius: 50%;
+	z-index: 1000;
+ }
+ .hei{
+ 	background: url(./images/qizib.png);
+ 	background-size: cover;
+ }
+ .bai{
+ 	background: url(./images/qiziw.png);
+ 	background-size: cover;
+ }
+ .hang{
+ 	display: block;
+ 	width: $width - $width/15;
+ 	height: 1px;
+ 	background: #000;
+ 	position: absolute;
+ 	left: $width/30;
+ 	z-index: 2;
+ 	opacity: 0;
+ }
+ .shu{
+ 	position: absolute;
+ 	top: $width/30;
+ 	width: 1px;
+ 	background: #000;
+ 	height: $width - $width/15;
+ 	display: block;
+ 	z-index: 3;
+ 	opacity: 0;
+ }
+}
+@for $i from 0 through 14{
+ 	.changjing b:nth-of-type(#{$i+1}){
+ 		top: $width/30+$i*$width/15;
+ 		animation:fei .5s ease $i*0.08s forwards;
+ 	}
+ 	.changjing i:nth-of-type(#{$i+1}){
+ 		left: $width/30+$i*$width/15;
+ 		animation:feiru .5s ease $i*0.08s forwards;
+ 	}
+ }
+@keyframes feiru{
+	0%{
+		transform:translate3d(0,-1000px,0);
+	}
+	100%{
+		transform:translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+@keyframes fei{
+	0%{
+		transform:translate3d(-1000px,0px,0);
+	}
+	100%{
+		transform:translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+.changjing .qipan span{
+	display: block;
+	position: absolute;
+	width: $width/60;
+	height: $width/60;
+	border-radius: 50%;
+	background: #000;
+	opacity: 0;
+	transform:translate3d(-45%,-45%,0);
+    animation: diaoluo .4s ease forwards;
+    @for $i from 1 through 5{
+    	&:nth-of-type(#{$i}){
+    		animation-delay:$i*0.2s;
+    	};
+    }
+	&:nth-of-type(1){
+        left:3.5*$width/15;
+        top: 3.5*$width/15;
+	}
+	&:nth-of-type(2){
+        left:11.5*$width/15;
+        top: 3.5*$width/15;
+	}
+	&:nth-of-type(3){
+        left:3.5*$width/15;
+        top: 11.5*$width/15;
+	}
+	&:nth-of-type(4){
+        left:7.5*$width/15;
+        top: 7.5*$width/15;
+	}
+	&:nth-of-type(5){
+        left:11.5*$width/15;
+        top: 11.5*$width/15;
+	}
+}
+@keyframes diaoluo{
+	0%{
+		transform:translate3d(0,-600px,0);
+	}
+	100%{
+		transform:translate3d(-45%,-45%,0);
+		opacity: 1;
+	}
+}
+.banner{
+	width:100%;
+	height:100%;
+}
+.banner img{
+	position:absolute;
+	left:0;
+	right:0;
+}
+.renren{
+	width:120px;
+	height:50px;
+	border-radius: 10px;
+	position:absolute;
+	left:150px;
+	top:50px;
+	font-size: 25px;
+	color:#fff;
+	font-family: "华康娃娃体w5(p)";
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	cursor:pointer;
+	background:rgba(0,150,136,0.4);
+	box-shadow: 0 0 30px rgba(0,150,136,1);
+}
+.renji{
+	width:120px;
+	height:50px;
+	position:absolute;
+	border-radius: 10px;
+	left:150px;
+	top:130px;
+	font-size: 25px;
+	color:#fff;
+	font-family: "华康娃娃体w5(p)";
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	cursor:pointer;
+	background:rgba(0,255,184,0.7);
+	box-shadow: 0 0 30px rgba(0,255,184,1);
+}
+.chongxin{
+	width:120px;
+	height:50px;
+	position:absolute;
+	border-radius: 10px;
+	right:150px;
+	top:440px;
+	font-size: 25px;
+	color:#fff;
+	font-family: "华康娃娃体w5(p)";
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	cursor:pointer;
+	background:rgba(205,220,57,0.7);
+	box-shadow: 0 0 20px rgba(205,220,57,0.7);
+}
+.close{
+	width:120px;
+	height:50px;
+	position:absolute;
+	border-radius: 10px;
+	right:150px;
+	top:520px;
+	font-family: "华康娃娃体w5(p)";
+	cursor:pointer;
+	font-size: 25px;
+	color:#fff;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	background:rgba(244,67,54,0.7);
+	box-shadow: 0 0 30px rgba(244,67,54,0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+

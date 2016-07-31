@@ -1,0 +1,491 @@
+@charset "UTF-8";
+.changjing .qipan, .changjing {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.zhezhaozuo {
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  transition: all 2s ease;
+}
+
+.zhezhaozuo.zuo {
+  transform: translateX(-200%);
+}
+
+.jieshao {
+  width: 500px;
+  height: 200px;
+  background: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 2s ease;
+  z-index: 200;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.jieshao.shang {
+  transform: translateY(-400%);
+  opacity: 0;
+}
+
+.jieshao .jieshaoa {
+  text-align: center;
+  font-size: 30px;
+  font-family: "华康少女文字w5(p)";
+  font-weight: bold;
+  color: #fff;
+}
+
+.select {
+  width: 150px;
+  height: 40px;
+  background: orange;
+  position: absolute;
+  left: 610px;
+  top: 500px;
+  z-index: 400;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 2s ease;
+  opacity: 1;
+}
+
+.select.xia {
+  transform: translateY(400%);
+  opacity: 0;
+}
+
+.select li {
+  color: #fff;
+}
+
+.jieshao .guize {
+  line-height: 2em;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #fff;
+}
+
+.zhezhaoyou {
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 5;
+  transition: all 2s ease;
+}
+
+.zhezhaoyou.you {
+  transform: translateX(200%);
+}
+
+.changjing .qipan {
+  width: 600px;
+  height: 600px;
+  background: url(../images/backg.png) no-repeat;
+  background-size: 600px 600px;
+  transition: all .8s ease;
+  transform: translateX(-200%);
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #fff;
+}
+
+.changjing .qipan.xia {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.changjing {
+  width: 600px;
+  height: 600px;
+}
+
+.changjing .qizi {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  float: left;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.changjing .hei {
+  background: url(../images/qizib.png);
+  background-size: cover;
+}
+
+.changjing .bai {
+  background: url(../images/qiziw.png);
+  background-size: cover;
+}
+
+.changjing .hang {
+  display: block;
+  width: 560px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.changjing .shu {
+  position: absolute;
+  top: 20px;
+  width: 1px;
+  background: #000;
+  height: 560px;
+  display: block;
+  z-index: 3;
+  opacity: 0;
+}
+
+.changjing b:nth-of-type(1) {
+  top: 20px;
+  animation: fei 0.5s ease 0s forwards;
+}
+
+.changjing i:nth-of-type(1) {
+  left: 20px;
+  animation: feiru 0.5s ease 0s forwards;
+}
+
+.changjing b:nth-of-type(2) {
+  top: 60px;
+  animation: fei 0.5s ease 0.08s forwards;
+}
+
+.changjing i:nth-of-type(2) {
+  left: 60px;
+  animation: feiru 0.5s ease 0.08s forwards;
+}
+
+.changjing b:nth-of-type(3) {
+  top: 100px;
+  animation: fei 0.5s ease 0.16s forwards;
+}
+
+.changjing i:nth-of-type(3) {
+  left: 100px;
+  animation: feiru 0.5s ease 0.16s forwards;
+}
+
+.changjing b:nth-of-type(4) {
+  top: 140px;
+  animation: fei 0.5s ease 0.24s forwards;
+}
+
+.changjing i:nth-of-type(4) {
+  left: 140px;
+  animation: feiru 0.5s ease 0.24s forwards;
+}
+
+.changjing b:nth-of-type(5) {
+  top: 180px;
+  animation: fei 0.5s ease 0.32s forwards;
+}
+
+.changjing i:nth-of-type(5) {
+  left: 180px;
+  animation: feiru 0.5s ease 0.32s forwards;
+}
+
+.changjing b:nth-of-type(6) {
+  top: 220px;
+  animation: fei 0.5s ease 0.4s forwards;
+}
+
+.changjing i:nth-of-type(6) {
+  left: 220px;
+  animation: feiru 0.5s ease 0.4s forwards;
+}
+
+.changjing b:nth-of-type(7) {
+  top: 260px;
+  animation: fei 0.5s ease 0.48s forwards;
+}
+
+.changjing i:nth-of-type(7) {
+  left: 260px;
+  animation: feiru 0.5s ease 0.48s forwards;
+}
+
+.changjing b:nth-of-type(8) {
+  top: 300px;
+  animation: fei 0.5s ease 0.56s forwards;
+}
+
+.changjing i:nth-of-type(8) {
+  left: 300px;
+  animation: feiru 0.5s ease 0.56s forwards;
+}
+
+.changjing b:nth-of-type(9) {
+  top: 340px;
+  animation: fei 0.5s ease 0.64s forwards;
+}
+
+.changjing i:nth-of-type(9) {
+  left: 340px;
+  animation: feiru 0.5s ease 0.64s forwards;
+}
+
+.changjing b:nth-of-type(10) {
+  top: 380px;
+  animation: fei 0.5s ease 0.72s forwards;
+}
+
+.changjing i:nth-of-type(10) {
+  left: 380px;
+  animation: feiru 0.5s ease 0.72s forwards;
+}
+
+.changjing b:nth-of-type(11) {
+  top: 420px;
+  animation: fei 0.5s ease 0.8s forwards;
+}
+
+.changjing i:nth-of-type(11) {
+  left: 420px;
+  animation: feiru 0.5s ease 0.8s forwards;
+}
+
+.changjing b:nth-of-type(12) {
+  top: 460px;
+  animation: fei 0.5s ease 0.88s forwards;
+}
+
+.changjing i:nth-of-type(12) {
+  left: 460px;
+  animation: feiru 0.5s ease 0.88s forwards;
+}
+
+.changjing b:nth-of-type(13) {
+  top: 500px;
+  animation: fei 0.5s ease 0.96s forwards;
+}
+
+.changjing i:nth-of-type(13) {
+  left: 500px;
+  animation: feiru 0.5s ease 0.96s forwards;
+}
+
+.changjing b:nth-of-type(14) {
+  top: 540px;
+  animation: fei 0.5s ease 1.04s forwards;
+}
+
+.changjing i:nth-of-type(14) {
+  left: 540px;
+  animation: feiru 0.5s ease 1.04s forwards;
+}
+
+.changjing b:nth-of-type(15) {
+  top: 580px;
+  animation: fei 0.5s ease 1.12s forwards;
+}
+
+.changjing i:nth-of-type(15) {
+  left: 580px;
+  animation: feiru 0.5s ease 1.12s forwards;
+}
+
+@keyframes feiru {
+  0% {
+    transform: translate3d(0, -1000px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fei {
+  0% {
+    transform: translate3d(-1000px, 0px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.changjing .qipan span {
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  opacity: 0;
+  transform: translate3d(-45%, -45%, 0);
+  animation: diaoluo .4s ease forwards;
+}
+
+.changjing .qipan span:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+
+.changjing .qipan span:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.changjing .qipan span:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+.changjing .qipan span:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+
+.changjing .qipan span:nth-of-type(5) {
+  animation-delay: 1s;
+}
+
+.changjing .qipan span:nth-of-type(1) {
+  left: 140px;
+  top: 140px;
+}
+
+.changjing .qipan span:nth-of-type(2) {
+  left: 460px;
+  top: 140px;
+}
+
+.changjing .qipan span:nth-of-type(3) {
+  left: 140px;
+  top: 460px;
+}
+
+.changjing .qipan span:nth-of-type(4) {
+  left: 300px;
+  top: 300px;
+}
+
+.changjing .qipan span:nth-of-type(5) {
+  left: 460px;
+  top: 460px;
+}
+
+@keyframes diaoluo {
+  0% {
+    transform: translate3d(0, -600px, 0);
+  }
+  100% {
+    transform: translate3d(-45%, -45%, 0);
+    opacity: 1;
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+}
+
+.banner img {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.renren {
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  position: absolute;
+  left: 150px;
+  top: 50px;
+  font-size: 25px;
+  color: #fff;
+  font-family: "华康娃娃体w5(p)";
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(0, 150, 136, 0.4);
+  box-shadow: 0 0 30px #009688;
+}
+
+.renji {
+  width: 120px;
+  height: 50px;
+  position: absolute;
+  border-radius: 10px;
+  left: 150px;
+  top: 130px;
+  font-size: 25px;
+  color: #fff;
+  font-family: "华康娃娃体w5(p)";
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(0, 255, 184, 0.7);
+  box-shadow: 0 0 30px #00ffb8;
+}
+
+.chongxin {
+  width: 120px;
+  height: 50px;
+  position: absolute;
+  border-radius: 10px;
+  right: 150px;
+  top: 440px;
+  font-size: 25px;
+  color: #fff;
+  font-family: "华康娃娃体w5(p)";
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(205, 220, 57, 0.7);
+  box-shadow: 0 0 20px rgba(205, 220, 57, 0.7);
+}
+
+.close {
+  width: 120px;
+  height: 50px;
+  position: absolute;
+  border-radius: 10px;
+  right: 150px;
+  top: 520px;
+  font-family: "华康娃娃体w5(p)";
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  background: rgba(244, 67, 54, 0.7);
+  box-shadow: 0 0 30px rgba(244, 67, 54, 0.7);
+}
